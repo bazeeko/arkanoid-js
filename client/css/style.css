@@ -1,0 +1,355 @@
+/* canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+} */
+
+@font-face {
+    font-family: Mordred;
+    src: url(./fonts/mordred.regular.ttf);
+}
+
+body {
+    background-color: white;
+}
+
+.menu {
+    border: 5px solid white;
+    position: absolute;
+    width: 60vmin;
+    height: 90px;
+    top: 55px;
+    left: 25%;
+}
+
+.brick00 {
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick01 {
+    background-image: url("../img/brick_01.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick02 {
+    background-image: url("../img/brick_02.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick03 {
+    background-image: url("../img/brick_03.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick04 {
+    background-image: url("../img/brick_04.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick05 {
+    background-image: url("../img/brick_05.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick06 {
+    background-image: url("../img/brick_06.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick07 {
+    background-image: url("../img/brick_07.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick08 {
+    background-image: url("../img/brick_08.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.brick09 {
+    background-image: url("../img/brick_09.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 40px;
+    width: 80px;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+#field {
+    background-image: url("../img/background.jpg");
+    position: absolute;
+    margin-left: 800px;
+    width: 800px;
+    height: 1200px;
+}
+
+#btn {
+    background-color: white;
+    padding-left: 0%;
+    position: absolute;
+    left: 46%;
+    bottom: 10px;
+    font-size: 2vmin;
+    width: 8vmin;
+}
+
+#restart {
+    background-color: white;
+    padding-left: 0%;
+    font-size: 2vmin;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 7vmin;
+}
+
+#platform {
+    background-image: url(../img/paddle.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 350px;
+}
+
+.plate-row {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#ball {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    border: 1px solid orchid;
+    z-index: 22;
+    left: 392px;
+    top: 1114px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#score {
+    font-family: Mordred;
+    text-align: left;
+    color: white;
+    position: absolute;
+    top: 6px;
+    font-size: 50px;
+}
+
+#scoreimage {
+    background-image: url(../img/score.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 15px;
+    font-size: 22px;
+}
+
+#lifes {
+    font-family: Mordred;
+    /* text-align: right; */
+    color: white;
+    position: absolute;
+    top: 6px;
+    font-size: 50px;
+}
+
+#lifeimage {
+    background-image: url(../img/life.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    top: 13px;
+    font-size: 22px;
+}
+
+#win {
+    text-align: center;
+    position: absolute;
+    bottom: 35%;
+    font-size: 5vmin;
+    color: gold;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#lose {
+    text-align: center;
+    position: absolute;
+    bottom: 35%;
+    font-size: 5vmin;
+    color: red;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#timer {
+    font-family: Mordred;
+    color: white;
+    position: absolute;
+    top: 58px;
+    font-size: 50px;
+}
+
+#timerimage {
+    background-image: url(../img/time.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 58px;
+    width: 58px;
+    top: 55px;
+    font-size: 22px;
+}
+
+#level {
+    font-family: Mordred;
+    /* text-align: right; */
+    color: white;
+    position: absolute;
+    top: 58px;
+    font-size: 50px;
+}
+
+#levelimage {
+    background-image: url(../img/level.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 67px;
+    font-size: 22px;
+}
+
+#controls {
+    font-family: Mordred;
+    padding: 20px;
+    background-color: burlywood;
+    text-align: left;
+    color: black;
+    position: absolute;
+    top: 450px;
+    font-size: 33px;
+}
+
+#start {
+    font-family: Mordred;
+    text-align: left;
+    color: whitesmoke;
+    position: absolute;
+    top: 950px;
+    font-size: 38px;
+    visibility: hidden;
+}
+
+#player {
+    font-family: Mordred;
+    font-size: 30px;
+    border: 1px solid black;
+    display: none;
+    margin: auto;
+    position: absolute;
+    background-color: rgb(87, 84, 79);
+    text-align: center;
+    left: 50px;
+    top: 400px;
+    width: 700px;
+    padding: 10px;
+    z-index: 2;
+}
+
+#board {
+    font-family: Mordred;
+    font-size: 30px;
+    border: 1px solid black;
+    color: white;
+    display: none;
+    margin: auto;
+    position: absolute;
+    background-color: rgb(87, 84, 79);
+    top: 400px;
+    left: 960px;
+    width: 500px;
+    padding: 10px;
+    z-index: 3;
+}
+
+#story {
+    /* background-color: rgb(194, 161, 101); */
+    font-family: Mordred;
+    font-size: 25px;
+    position: absolute;
+    padding: 30px;
+    margin: 50px;
+    margin-top: 450px;
+    text-align: center;
+    color: white;
+}
+
+#gameovertext {
+    /* background-color: rgb(194, 161, 101); */
+    font-family: Mordred;
+    font-size: 25px;
+    position: relative;
+    padding: 10px;
+    /* margin: 50px;
+    margin-top: 450px;
+    text-align: center; */
+    color: white;
+}

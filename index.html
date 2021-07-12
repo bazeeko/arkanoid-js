@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>Arkanoid</title>
+    <link rel="stylesheet" type="text/css" href="./client/css/style.css">
+    <script type="text/javascript" src="./client/js/levels.js"></script>
+    <!-- <script type="text/javascript" src="./client/js/components.js"></script> -->
+    <script type="text/javascript" src="./client/js/game.js"></script>
+    <script type="text/javascript" src="./client/js/scoreboard.js"></script>
+</head>
+
+<body onload="onLoad()">
+
+    <div id="field">
+        <div id="platform"></div>
+        <div id="ball"></div>
+        <div id="story">
+        </div>
+        <div id="player">
+            <div id="gameovertext"></div>
+            <input type="text" name="player" id="pname" maxlength="10" size="10" placeholder="Enter your name">
+            <button type="submit" onclick="addPlayer()">Submit</button>
+        </div>
+    </div>
+    <div id="scoreimage"></div>
+    <div id="score">0</div>
+    <div id="timerimage"></div>
+    <div id="timer">00:00</div>
+    <div id="levelimage"></div>
+    <div id="level">1</div>
+    <div id="lifeimage"></div>
+    <div id="lifes">2</div>
+    <div id="controls">Controls:<br>
+        Left Arrow - move paddle to the left;<br>
+        Right Arrow - move the paddle to the right;<br>
+        Space - pause/continue the game;<br>
+        R - restart the game.
+    </div>
+    <div id="board">
+        <h2 class="center"><b>SCORE BOARD</b></h2>
+        <h4 id="head" class="center">Congrats <span id="plname"></span> , you are in the top <span id="percent"></span>,
+            in the <span id="rank"></span> position. </h4>
+        <table id="table">
+            <tr>
+                <th><b>Rank</b></th>
+                <th><b>Name</b></th>
+                <th><b>Score</b></th>
+                <th><b>Time</b></th>
+            </tr>
+        </table>
+        <p class="center"><button id="back" type="button" onclick="previous()">prev</button> Page <span
+                id="current"></span>/<span id="all"></span> <button id="next" type="button"
+                onclick="next()">next</button></p>
+    </div>
+    <div id="start">Press SPACE to start the game</div>
+</body>
+
+</html>
