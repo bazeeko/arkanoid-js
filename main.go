@@ -86,14 +86,15 @@ func createNewPlayer(w http.ResponseWriter, r *http.Request) {
 // }
 
 func main() {
-	port := "8282"
-
 	mux := http.NewServeMux()
 
 	mux.Handle("/client/", http.StripPrefix("/client", http.FileServer(http.Dir("./client"))))
 	mux.HandleFunc("/", parseExecuteTemplate)
 	mux.HandleFunc("/score", createNewPlayer)
-	log.Println("port is Listening:", port)
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 	http.ListenAndServe(":"+port, mux)
 }
