@@ -1,6 +1,6 @@
 # ARKANOID / BREAK OUT
 
-To play this game on your PC run```go run main.go``` command in your console
+To play this game on your PC run ```go run main.go``` command in your console
 
 ## Instructions
 
